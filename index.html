@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>croppy</title>
+	<meta content="intelligent image cropping via seam carving" name="description">
+	<link href="style.css" rel="stylesheet">
+	<script src="https://www.lactame.com/lib/image-js/0.21.2/image.min.js">
+	</script>
+</head>
+
+<body>
+	<h1>Croppy</h1>
+	<p>Seam carve an image by a specified percentage value</p>
+	<img id="result" style="image-rendering: pixelated;">
+	<div id="bar" style="width: 40%; background-color: grey;">
+		<div id="progress" style="width: 1%; height: 30px; background-color: green;"></div>
+	</div> 
+	<p>Percent to carve by</p>
+	<input type="number" id="amount" min="0" max="100" value="30">
+	
+	<p>File to carve</p>
+	<input type="file" accept="image/jpeg" onchange="uploadImage(event)">
+
+	<p>For best results, provide a jpeg with a pixel count of around 90000 (300x300)</p>
+	<p>Check out the <a href="https://github.com/humboldt123/croppy" target="_blank">Github Repo</a></p>
+	<script async defer src="index.js">
+	</script>
+</body>
+</html>
